@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revelação - É uma menina!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body
+    <div class="revelacao">
+        <h1>É uma menina!</h1>
+        <h2>Bem-vinda, Maitê!</h2>
+        <div class="confetes"></div>
+    </div>
+
+    <script>
+        // Função para criar confetes animados
+        function criarConfetes() {
+            const container = document.querySelector(".confetes");
+            for (let i = 0; i < 50; i++) {
+                const confete = document.createElement("div");
+                confete.classList.add("confete");
+                confete.style.left = Math.random() * 100 + "vw";
+                confete.style.animationDelay = `${Math.random() * 2}s`;
+                confete.style.backgroundColor = `rgba(255, ${Math.random() * 200}, ${Math.random() * 200}, 0.8)`;
+                container.appendChild(confete);
+
+                setTimeout(() => {
+                    confete.remove();
+                }, 3000);
+            }
+        }
+
+        // Executa a criação dos confetes ao carregar a página
+        window.onload = criarConfetes;
+    </script>
+
+    <!-- Elementos decorativos (somente corações) -->
+    <div class="coracao" style="left: 10%; animation-duration: 12s;"></div>
+    <div class="coracao" style="left: 30%; animation-duration: 14s;"></div>
+    <div class="coracao" style="left: 50%; animation-duration: 16s;"></div>
+    <div class="coracao" style="left: 70%; animation-duration: 18s;"></div>
+    <div class="coracao" style="left: 90%; animation-duration: 15s;"></div>
+</div>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+/* Estilo geral */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Estilo da tela inicial */
+.inicio {
+    background: linear-gradient(120deg, #ffb6c1, #add8e6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+button {
+    background: linear-gradient(90deg, #ff7eb3, #89cff0);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: linear-gradient(90deg, #ff96c5, #96d8f0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo da tela de revelação */
+.revelacao {
+    background-color: #f8b6d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Confetes */
+.confetes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confete {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: pink;
+    border-radius: 50%;
+    animation: confete-animation 3s linear forwards;
+}
+
+@keyframes confete-animation {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}/* Fontes Gerais */
+body {
+    font-family: 'Poppins', sans-serif; /* Fonte moderna e minimalista */
+    font-size: 16px;
+    color: #333; /* Cor neutra e agradável para o texto */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+}
+
+/* Estilo para Títulos */
+h1 {
+    font-family: 'Poppins', sans-serif; /* Mesma fonte, mas maior destaque */
+    font-size: 2em;
+    font-weight: bold;
+    color: #444; /* Tom escuro para destacar */
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    font-weight: 600;
+    color: #666; /* Um tom mais claro que o H1 */
+    margin-bottom: 15px;
+}
+
+/* Estilo para o texto em geral */
+p {
+    font-family: 'Roboto', sans-serif; /* Fonte complementar para textos longos */
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o texto para manter o design limpo */
+} 
+/* Fundo decorativo da página de revelação */
+.revelacao {
+    background-color: #f8b6d4; /* Fundo rosa suave */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Elementos decorativos (corações) */
+.coracao {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png'); /* Ícone de coração */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    animation: flutuar 10s infinite ease-in-out;
+}
+
+/* Animação para os corações */
+@keyframes flutuar {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
